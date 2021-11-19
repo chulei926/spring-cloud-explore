@@ -3,9 +3,11 @@ package com.leichu.spring.cloud.explore.user.service;
 import com.leichu.spring.cloud.explore.common.model.User;
 import com.leichu.spring.cloud.explore.common.service.UserService;
 import com.leichu.spring.cloud.explore.user.mapper.UserMapper;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
+@Service("userService")
 public class UserServiceImpl implements UserService {
 
 	@Resource

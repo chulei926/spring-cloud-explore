@@ -11,7 +11,7 @@
 
 	<modules>
 		<module>ms-common-api</module>
-		<module>ms-user-producer</module>
+		<module>ms-user-provider</module>
 		<module>ms-user-consumer</module>
 	</modules>
 
