@@ -1,10 +1,9 @@
-package com.leichu.spring.cloud.explore.user.mapper;
+package com.leichu.spring.cloud.explore.user.provider.mapper;
 
 import com.leichu.spring.cloud.explore.common.model.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
-import org.springframework.stereotype.Repository;
 
 @Mapper
 public interface UserMapper {

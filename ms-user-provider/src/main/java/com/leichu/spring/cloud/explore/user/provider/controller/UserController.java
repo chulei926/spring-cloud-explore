@@ -1,4 +1,4 @@
-package com.leichu.spring.cloud.explore.user.controller;
+package com.leichu.spring.cloud.explore.user.provider.controller;
 
 import com.leichu.spring.cloud.explore.common.dto.JsonResult;
 import com.leichu.spring.cloud.explore.common.model.User;

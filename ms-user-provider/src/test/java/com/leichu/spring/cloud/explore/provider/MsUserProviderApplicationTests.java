@@ -1,7 +1,7 @@
-package com.leichu.spring.cloud.explore.user;
+package com.leichu.spring.cloud.explore.provider;
 
 import com.leichu.spring.cloud.explore.common.model.User;
-import com.leichu.spring.cloud.explore.user.mapper.UserMapper;
+import com.leichu.spring.cloud.explore.user.provider.mapper.UserMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
