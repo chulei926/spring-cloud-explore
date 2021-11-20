@@ -2,10 +2,7 @@ package com.leichu.spring.cloud.explore.user.consumer.controller;
 
 import com.leichu.spring.cloud.explore.common.dto.JsonResult;
 import com.leichu.spring.cloud.explore.common.model.User;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
@@ -18,7 +15,7 @@ public class UserController {
 
 	private static final String host = "http://localhost:8001/user-service/";
 
-	@RequestMapping("user/{id}")
+	@GetMapping("user/{id}")
 	@ResponseBody
 	public JsonResult<User> user(@PathVariable("id") Long id) {
 		final JsonResult result = restTemplate.getForObject(host + "user/" + id, JsonResult.class, id);
@@ -26,5 +23,13 @@ public class UserController {
 		return result;
 	}
 
+
+	@PostMapping("user/create")
+	@ResponseBody
+	public JsonResult<User> create(@RequestBody User user) {
+		final JsonResult result = restTemplate.postForObject(host + "user/create", user, JsonResult.class);
+		System.out.println(result);
+		return result;
+	}
 
 }

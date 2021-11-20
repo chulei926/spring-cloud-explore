@@ -15,7 +15,8 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public Long save(User user) {
-		return userMapper.insert(user);
+		userMapper.insert(user);
+		return user.getId();
 	}
 
 	@Override

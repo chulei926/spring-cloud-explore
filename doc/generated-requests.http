@@ -1,4 +1,22 @@
+### 获取用户
 GET http://localhost:8001/user-service/user/1
 Accept: application/json
 
-###
+### 创建用户
+POST http://localhost:8001/user-service/user/create
+Content-Type: application/json
+
+{
+	"name":"csx",
+    "age": 2
+}
+
+
+### 创建用户
+POST http://localhost:8080/user/create
+Content-Type: application/json
+
+{
+	"name":"mi",
+	"age": 2
+}
