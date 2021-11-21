@@ -20,7 +20,7 @@
 
 [https://github.com/alibaba/spring-cloud-alibaba/wiki/%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E](https://github.com/alibaba/spring-cloud-alibaba/wiki/%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E)
 
-![](D:\workspace\github-workspace\spring-cloud-explore\images\spring-cloud_spring-boot_version.png)
+![spring-cloud_spring-boot_version](./images/spring-cloud_spring-boot_version.png)
 
 ```json
 "spring-cloud": {
