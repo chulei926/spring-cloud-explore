@@ -13,8 +13,7 @@ public class UserController {
 	@Resource
 	private RestTemplate restTemplate;
 
-	//	private static final String host = "http://localhost:8001/user-service/"; // 单节点
-	private static final String host = "http://MS-USER-PROVIDER/"; // 这里的 MS-USER-PROVIDER 是服务提供方的 spring.application.name
+	private static final String host = "http://ms-user-provider/";
 
 	@GetMapping("user/{id}")
 	public JsonResult<User> user(@PathVariable("id") Long id) {

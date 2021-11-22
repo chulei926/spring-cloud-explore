@@ -13,10 +13,10 @@ Content-Type: application/json
 
 
 ### 创建用户
-POST http://localhost:7003/user/create
+POST http://localhost:8888/user/create
 Content-Type: application/json
 
 {
-	"name":"mi",
+	"name":"lei",
 	"age": 2
 }

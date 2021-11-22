@@ -1,7 +1,9 @@
 server:
-    port: 8080
+    port: 8888
 
 spring:
     application:
         name: ms-user-consumer
-
+    cloud:
+        zookeeper:
+            connect-string: localhost:2181
