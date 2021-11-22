@@ -285,3 +285,27 @@ public Object discovery(){
 
 ## Eureka 自我保护机制
 
+Eureka 的自我保护机制主要用于 客户端 和 服务端 之间存在一些网络不确定场景下的保护。
+
+一旦进入到保护模式，Eureka server 会尝试保护其服务注册表中的信息，不主动删除注册表中的数据，换句话说，**不会主动注销任何的服务**。
+
+下图说明 Eureka Server 处于自我保护模式。
+
+![eureka_self_protect](../images/eureka_self_protect.png)
+
+### 如何关闭 ？
+
+Eureka 的自我保护机制默认是开启的。
+```properties
+eureka.server.enable-self-preservation=true     # 开启
+eureka.server.enable-self-preservation=false    # 关闭
+```
+关闭后的效果：
+![eureka_self_protect_close](../images/eureka_self_protect_close.png)
+
+修改 客户端：
+```properties
+eureka.instance.lease-renewal-interval-in-seconds: 1        # 客户端向服务端发送心跳的时间间隔，单位为秒(默认是30秒)
+eureka.instance.lease-expiration-duration-in-seconds: 2     # 服务端在收到最后一次心跳后等待时间上限，单位为秒(默认是90秒)，超时将剔除服务
+```
+
