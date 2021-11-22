@@ -1,6 +1,5 @@
 package com.leichu.spring.cloud.explore.user.provider.controller;
 
-import com.alibaba.fastjson.JSONObject;
 import com.leichu.spring.cloud.explore.common.dto.JsonResult;
 import com.leichu.spring.cloud.explore.common.model.User;
 import com.leichu.spring.cloud.explore.common.service.UserService;
@@ -27,7 +26,6 @@ public class UserController {
 	private DiscoveryClient discoveryClient;
 
 	@RequestMapping("user/{id}")
-	@ResponseBody
 	public JsonResult<User> user(@PathVariable("id") Long id) {
 		final User user = userService.get(id);
 		final JsonResult<User> result = JsonResult.getSuccessResult(user);
@@ -36,7 +34,6 @@ public class UserController {
 	}
 
 	@PostMapping("user/create")
-	@ResponseBody
 	public JsonResult<User> create(@RequestBody User user) {
 		final Long id = userService.save(user);
 		final User user1 = userService.get(id);
@@ -46,7 +43,7 @@ public class UserController {
 	}
 
 	@GetMapping("discovery")
-	public Object discovery(){
+	public Object discovery() {
 		final List<String> services = discoveryClient.getServices();
 		for (String service : services) {
 			System.out.println(service);

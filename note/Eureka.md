@@ -281,3 +281,7 @@ public Object discovery(){
     return instances;
 }
 ```
+
+
+## Eureka 自我保护机制
+

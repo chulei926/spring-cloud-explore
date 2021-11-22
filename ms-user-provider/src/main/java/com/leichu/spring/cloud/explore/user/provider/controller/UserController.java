@@ -14,7 +14,6 @@ public class UserController {
 	private UserService userService;
 
 	@RequestMapping("user/{id}")
-	@ResponseBody
 	public JsonResult<User> user(@PathVariable("id") Long id) {
 		final User user = userService.get(id);
 		System.out.println(user);
@@ -22,7 +21,6 @@ public class UserController {
 	}
 
 	@PostMapping("user/create")
-	@ResponseBody
 	public JsonResult<User> create(@RequestBody User user) {
 		final Long id = userService.save(user);
 		final User user1 = userService.get(id);
