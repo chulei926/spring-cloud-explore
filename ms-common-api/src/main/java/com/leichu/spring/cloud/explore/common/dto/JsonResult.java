@@ -17,6 +17,7 @@ public class JsonResult<T> implements Serializable {
 	 * 操作码（0：成功，-1：失败）.
 	 */
 	private int code;
+	private String msg;
 	/**
 	 * 结果.
 	 */
@@ -28,6 +29,14 @@ public class JsonResult<T> implements Serializable {
 
 	public void setCode(int code) {
 		this.code = code;
+	}
+
+	public String getMsg() {
+		return msg;
+	}
+
+	public void setMsg(String msg) {
+		this.msg = msg;
 	}
 
 	public T getResult() {

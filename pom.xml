@@ -13,10 +13,9 @@
 		<module>ms-common-api</module>
 		<module>ms-user-provider</module>
 		<module>ms-user-consumer</module>
-		<module>ms-eureka-server7000</module>
-		<module>ms-eureka-server7001</module>
-		<module>ms-eureka-client-user-provider7002</module>
-		<module>ms-eureka-client-user-consumer7003</module>
+		<module>ms-eureka-server</module>
+		<module>ms-eureka-client-user-provider</module>
+		<module>ms-eureka-client-user-consumer</module>
 	</modules>
 
 	<properties>
