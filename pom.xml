@@ -16,6 +16,8 @@
 		<module>ms-eureka-server</module>
 		<module>ms-eureka-client-user-provider</module>
 		<module>ms-eureka-client-user-consumer</module>
+		<module>ms-zk-user-provider</module>
+		<module>ms-zk-user-consumer</module>
 	</modules>
 
 	<properties>
