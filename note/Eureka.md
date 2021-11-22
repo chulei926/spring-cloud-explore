@@ -250,3 +250,34 @@ Content-Type: application/json
 
 
 
+## DiscoveryClient
+启用 `@EnableDiscoveryClient` 注解。参考 `ms-eureka-client-user-provider`。
+- MsEurekaUserProviderApplication.java
+```java
+@SpringBootApplication
+@EnableEurekaClient
+@EnableDiscoveryClient
+public class MsEurekaUserProviderApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(MsEurekaUserProviderApplication.class, args);
+	}
+
+}
+```
+
+- UserController.java 
+```java
+@Resource
+private DiscoveryClient discoveryClient;
+
+@GetMapping("discovery")
+public Object discovery(){
+    final List<String> services = discoveryClient.getServices();
+    for (String service : services) {
+        System.out.println(service);
+    }
+    final List<ServiceInstance> instances = discoveryClient.getInstances("MS-USER-PROVIDER");
+    return instances;
+}
+```
