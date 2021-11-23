@@ -19,7 +19,7 @@ eureka:
 #            defaultZone: http://eureka7001.com:7001/eureka
             defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka  # 集群版
     instance:
-        instance-id: user_service_${server.port}
+        instance-id: user_service_${server.port} # 多个实例的 instance-id 要唯一
         prefer-ip-address: true
         # 客户端向服务端发送心跳的时间间隔，单位为秒(默认是30秒)
         lease-renewal-interval-in-seconds: 1
