@@ -20,6 +20,7 @@
 		<module>ms-zk-user-consumer</module>
 		<module>ms-consul-user-provider</module>
 		<module>ms-consul-user-consumer</module>
+		<module>ms-eureka-client-user-consumer-ribbon</module>
 	</modules>
 
 	<properties>
