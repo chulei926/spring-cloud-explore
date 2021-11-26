@@ -21,6 +21,7 @@
 		<module>ms-consul-user-provider</module>
 		<module>ms-consul-user-consumer</module>
 		<module>ms-eureka-client-user-consumer-ribbon</module>
+		<module>ms-eureka-client-user-consumer-feign</module>
 	</modules>
 
 	<properties>

@@ -30,6 +30,12 @@ public class UserController {
 		final User user = userService.get(id);
 		final JsonResult<User> result = JsonResult.getSuccessResult(user);
 		result.setMsg(port.toString());
+		// 模拟客户端超时
+		try {
+			Thread.sleep(2*1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		return result;
 	}
 
