@@ -24,6 +24,14 @@
 		<module>ms-eureka-client-user-consumer-feign</module>
 	</modules>
 
+	<repositories>
+		<repository>
+			<id>repo1-cache</id>
+			<name>repo1-cache</name>
+			<url>http://maven.aliyun.com/nexus/content/groups/public</url>
+		</repository>
+	</repositories>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>8</maven.compiler.source>

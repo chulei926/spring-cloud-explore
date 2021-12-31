@@ -3,7 +3,7 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-node_modules/
+
 ### STS ###
 .apt_generated
 .classpath
@@ -14,7 +14,7 @@ node_modules/
 .sts4-cache
 
 ### IntelliJ IDEA ###
-.idea/**
+.idea
 *.iws
 *.iml
 *.ipr
@@ -31,6 +31,3 @@ build/
 
 ### VS Code ###
 .vscode/
-/.idea
-/**/src/main/resources/rebel.xml
-*.log

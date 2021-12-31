@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.leichu.spring.cloud.explore.sb_mybatis_pgsql.mapper.UserMapper">
+
+    <update id="update" parameterType="com.leichu.spring.cloud.explore.sb_mybatis_pgsql.model.User">
+        update tb_user
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="name != null">name = #{name},</if>
+            <if test="pwd != null">pwd = #{pwd},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+</mapper>
