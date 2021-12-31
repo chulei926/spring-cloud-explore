@@ -22,6 +22,8 @@
 		<module>ms-consul-user-consumer</module>
 		<module>ms-eureka-client-user-consumer-ribbon</module>
 		<module>ms-eureka-client-user-consumer-feign</module>
+		<!-- springboot 模块 -->
+		<module>sb-mybatis-pgsql</module>
 	</modules>
 
 	<repositories>
